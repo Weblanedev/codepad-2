@@ -1,17 +1,16 @@
-import { useEffect, useState } from "react";
-import { useModals } from "./useModal";
-import ShowContactModal from "./show-contact";
-import phoneIcon from "./assets/phone.png";
-import mailIcon from "./assets/mail.png";
-import locationIcon from "./assets/location.png";
+import { useEffect, useState } from 'react';
+import { useModals } from './useModal';
+import ShowContactModal from './show-contact';
+import phoneIcon from './assets/phone.png';
+import mailIcon from './assets/mail.png';
+import locationIcon from './assets/location.png';
 
 const Contact = () => {
   useEffect(() => {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: "smooth",
-
+      behavior: 'smooth',
     });
   }, []);
 
@@ -19,11 +18,11 @@ const Contact = () => {
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
   // State to manage form field values
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [subject, setSubject] = useState("");
-  const [message, setMessage] = useState("");
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
+  const [subject, setSubject] = useState('');
+  const [message, setMessage] = useState('');
 
   useEffect(() => {
     const checkFormValidity = () => {
@@ -63,10 +62,10 @@ const Contact = () => {
     // Add your form submission logic here
   };
 
-  const showContact = useModals(["showContact"]);
+  const showContact = useModals(['showContact']);
 
   function toggleShowContactModal() {
-    showContact.toggleModal("showContact");
+    showContact.toggleModal('showContact');
   }
 
   return (
@@ -165,7 +164,7 @@ const Contact = () => {
               <h4 className="text-[24px] leading-[24px] font-medium">
                 Call Us
               </h4>
-              <p className="text-blue-500 leading-[16px]">+234-817-351-5320</p>
+              <p className="text-blue-500 leading-[16px]">+234-908-353-6937</p>
             </div>
           </div>
           <div className="flex gap-5 items-start justify-center">
@@ -184,7 +183,7 @@ const Contact = () => {
                 Address
               </h4>
               <p className="text-blue-500 leading-normal">
-                15 Odiyan Street, Lekki, Phase 1
+                4, Fred Omojole Street, Gbagada, Lagos State, Nigeria
               </p>
             </div>
           </div>
