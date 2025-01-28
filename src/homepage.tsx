@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import { Book, books } from "./utils";
-import { useEffect } from "react";
+import { Link } from 'react-router-dom';
+import { Book, books } from './utils';
+import { useEffect } from 'react';
 
 const Homepage = ({
   setSelectedBook,
@@ -11,7 +11,7 @@ const Homepage = ({
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   }, []);
 
@@ -31,7 +31,7 @@ const Homepage = ({
 
           <Link
             to="/products"
-            className="text-base font-medium text-white bg-blue-500 rounded-full px-7 md:px-12 py-4  hover:bg-blue-600 flex items-center justify-center gap-3"
+            className="text-base font-medium text-white bg-primary rounded-full px-7 md:px-12 py-4  hover:bg-primaryHover flex items-center justify-center gap-3"
           >
             Explore Products
           </Link>
@@ -44,9 +44,9 @@ const Homepage = ({
         />
       </section>
 
-      <section className="flex w-full flex-col md:flex-row items-center justify-center md:justify-between gap-5 bg-blue-500/30 py-14 md:py-20">
+      <section className="flex w-full flex-col md:flex-row items-center justify-center md:justify-between gap-5 bg-primary/30 py-14 md:py-20">
         <div className="flex flex-col md:flex-row gap-8 items-center justify-center w-full">
-          {books.slice(0, 3).map((book) => (
+          {books.slice(0, 3).map(book => (
             <div className="flex flex-col items-center justify-center pt-12 pb-8 px-16 md:px-20 gap-7 bg-white rounded-2xl text-blue-900 round ed-xl">
               <img
                 src={book.img}
@@ -65,7 +65,7 @@ const Homepage = ({
               <Link
                 to="/billing"
                 onClick={() => setSelectedBook(book)}
-                className="text-base font-medium text-white bg-blue-500 rounded-full px-7 md:px-8 py-2 md:py-3 hover:bg-blue-600 flex items-center justify-center gap-3"
+                className="text-base font-medium text-white bg-primary rounded-full px-7 md:px-8 py-2 md:py-3 hover:bg-primaryHover flex items-center justify-center gap-3"
               >
                 Purchase
               </Link>
@@ -89,7 +89,7 @@ const Homepage = ({
             />
 
             <div className="absolute top-0 z-20 text-white flex flex-col gap-4 items-start justify-start ml-10 mt-10">
-              <h4 className="text-sm leading-[14px] font-medium text-white bg-blue-500 rounded-md md:rounded-md px-[14px] py-[7px] flex items-center justify-center gap-3">
+              <h4 className="text-sm leading-[14px] font-medium text-white bg-primary rounded-md md:rounded-md px-[14px] py-[7px] flex items-center justify-center gap-3">
                 News
               </h4>
 
@@ -112,7 +112,7 @@ const Homepage = ({
             />
 
             <div className="absolute top-0 z-20 text-white flex flex-col gap-4 items-start justify-start ml-10 mt-10">
-              <h4 className="text-sm leading-[14px] font-medium text-white bg-blue-500 rounded-md md:rounded-md px-[14px] py-[7px] flex items-center justify-center gap-3">
+              <h4 className="text-sm leading-[14px] font-medium text-white bg-primary rounded-md md:rounded-md px-[14px] py-[7px] flex items-center justify-center gap-3">
                 News
               </h4>
 
@@ -136,7 +136,7 @@ const Homepage = ({
             />
 
             <div className="absolute top-0 z-20 text-white flex flex-col gap-4 items-start justify-start ml-10 mt-10">
-              <h4 className="text-sm leading-[14px] font-medium text-white bg-blue-500 rounded-md md:rounded-md px-[14px] py-[7px] flex items-center justify-center gap-3">
+              <h4 className="text-sm leading-[14px] font-medium text-white bg-primary rounded-md md:rounded-md px-[14px] py-[7px] flex items-center justify-center gap-3">
                 News
               </h4>
 
@@ -159,7 +159,7 @@ const Homepage = ({
             />
 
             <div className="absolute top-0 z-20 text-white flex flex-col gap-4 items-start justify-start ml-10 mt-10">
-              <h4 className="text-sm leading-[14px] font-medium text-white bg-blue-500 rounded-md md:rounded-md px-[14px] py-[7px] flex items-center justify-center gap-3">
+              <h4 className="text-sm leading-[14px] font-medium text-white bg-primary rounded-md md:rounded-md px-[14px] py-[7px] flex items-center justify-center gap-3">
                 News
               </h4>
 
