@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <div className="w-full bg-blue-800 flex flex-col p-10 md:p-20 gap-10 md:px-[130px]">
+    <div className="w-full bg-blue-600 flex flex-col p-10 md:p-20 gap-10 md:px-[130px]">
       <div className="flex flex-col md:flex-row w-full items-center md:justify-between gap-5">
         <h3 className="text-white font-medium text-center md:text-left text-[22px] leading-[35.2px] md:w-[850px]">
           Our highly skilled development teams specialized in Java, PHP, React,

@@ -183,7 +183,7 @@ const Contact = () => {
                 Address
               </h4>
               <p className="text-blue-500 leading-normal">
-                4, Fred Omojole Street, Gbagada, Lagos State, Nigeria
+                4, Fred Omojole Street, Gbagada, Lagos State, Nigeria
               </p>
             </div>
           </div>
