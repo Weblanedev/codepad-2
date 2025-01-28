@@ -173,7 +173,7 @@ const Contact = () => {
               <h4 className="text-[24px] leading-[24px] font-medium">
                 Mail Us
               </h4>
-              <p className="text-blue-500 leading-[16px]">support@codepad.ng</p>
+              <p className="text-blue-500 leading-[16px]">support@trivona.ng</p>
             </div>
           </div>
           <div className="flex gap-5 items-start justify-center">
@@ -183,7 +183,7 @@ const Contact = () => {
                 Address
               </h4>
               <p className="text-blue-500 leading-normal">
-                4, Fred Omojole Street, Gbagada, Lagos State, Nigeria
+                4, Fred Omojole Street, Gbagada, Lagos State, Nigeria
               </p>
             </div>
           </div>

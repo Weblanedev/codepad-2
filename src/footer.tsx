@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -25,12 +25,12 @@ const Footer = () => {
         >
           Home
         </Link>
-        <Link
+        {/* <Link
           to="/about-us"
           className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
         >
           About
-        </Link>
+        </Link> */}
         <Link
           to="/products"
           className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
@@ -52,7 +52,7 @@ const Footer = () => {
       </div>
 
       <p className="text-[12px] capitalize leading-[24px] text-center text-gray-400">
-        © 2023 CodePad technology platforms Limited.
+        &copy; {new Date().getFullYear()} Trivona Limited.
       </p>
     </div>
   );
