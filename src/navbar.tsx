@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [navbarVisible, setNavbarVisible] = useState<boolean>(false);
@@ -13,7 +13,7 @@ const Navbar = () => {
         to="/"
         className="text-[20px] md:text-[30px] md:font-bold font-medium text-[#333333]"
       >
-        Codepad
+        Trivona Limited
       </Link>
 
       <div className="md:flex items-center justify-center gap-14 hidden">
@@ -23,13 +23,13 @@ const Navbar = () => {
         >
           Products
         </Link>
-        <Link
+        {/* <Link
           to="/about-us"
           className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer"
         >
           About
         </Link>
-
+ */}
         <Link
           to="/contact-us"
           className="text-[16px] leading-[24px] font-medium text-[#333333] cursor-pointer"
@@ -68,7 +68,7 @@ const Navbar = () => {
 
       <div
         className={`pb-[5px] transition duration-300 ease-in-out ${
-          navbarVisible ? "top-[66px]" : "-top-[300px]"
+          navbarVisible ? 'top-[66px]' : '-top-[300px]'
         } shadow-2xl shadow-blue-900/20 flex flex-col items-center justify-between w-full left-0 absolute bg-white px-10 md:hidden`}
       >
         <Link
@@ -77,12 +77,12 @@ const Navbar = () => {
         >
           Products
         </Link>
-        <Link
+        {/* <Link
           to="/about-us"
           className="text-[16px] leading-[24px] font-normal text-[#333333] cursor-pointer text-left w-full border-b py-3 hover:text-green-500 transition-colors"
         >
           About
-        </Link>
+        </Link> */}
 
         <Link
           to="/contact-us"

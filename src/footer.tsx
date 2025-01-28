@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
+
     <div className="w-full bg-blue-600 flex flex-col p-10 md:p-20 gap-10 md:px-[130px]">
       <div className="flex flex-col md:flex-row w-full items-center md:justify-between gap-5">
         <h3 className="text-white font-medium text-center md:text-left text-[22px] leading-[35.2px] md:w-[850px]">
@@ -25,12 +26,12 @@ const Footer = () => {
         >
           Home
         </Link>
-        <Link
+        {/* <Link
           to="/about-us"
           className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
         >
           About
-        </Link>
+        </Link> */}
         <Link
           to="/products"
           className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
@@ -52,7 +53,7 @@ const Footer = () => {
       </div>
 
       <p className="text-[12px] capitalize leading-[24px] text-center text-gray-400">
-        © 2023 CodePad technology platforms Limited.
+        &copy; {new Date().getFullYear()} Trivona Limited.
       </p>
     </div>
   );

@@ -1,13 +1,12 @@
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   useEffect(() => {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: "smooth",
-
+      behavior: 'smooth',
     });
   }, []);
 
@@ -16,7 +15,7 @@ const About = () => {
       <section className="flex flex-col-reverse md:flex-row h-[90vh] md:h-[55vh] mx-10 md:mx-[130px] items-center justify-center md:justify-between gap-5 bg-white">
         <div className=" text-black flex flex-col gap-9 md:gap-12 items-center justify-center md:items-start">
           <h1 className="font-medium md:font-semibold text-[50px] sm:text-[40px] md:text-[50px] md:text-left w-full md:w-[530px] leading-snug md:leading-[62px] text-center">
-            About Codepad
+            About Trivona Limited
           </h1>
 
           <p className="text-center md:text-left mt-[-30px] w-[450px] md:w-[330px]">
@@ -55,7 +54,6 @@ const About = () => {
             access and support across operating systems, including Windows and
             Mac; and global support with direct access to an expert.
           </p>
-
         </div>
 
         <img
@@ -120,7 +118,7 @@ const About = () => {
       <section className="flex flex-col-reverse md:flex-row mx-10 md:mx-[130px] items-center justify-center md:justify-between gap-5 bg-white py-14 md:py-20">
         <div className=" text-black flex flex-col gap-9 md:gap-12 items-center justify-center md:items-start">
           <h1 className="font-medium md:font-semibold text-[50px] sm:text-[40px] md:text-[50px] md:text-left w-full md:w-[530px] leading-snug md:leading-[62px] text-center">
-            Why Codepad
+            Why Trivona Limited
           </h1>
 
           <p className="text-center md:text-left mt-[-10px]  w-full md:w-[550px] leading-relaxed">
@@ -128,7 +126,7 @@ const About = () => {
             to our clients. We craft customized solutions as per the needs of
             your business. Our interactive web and ecommerce development
             solutions have helped our clients climb the ladder of success in an
-            agile way. 
+            agile way.
           </p>
 
           <p className="text-center md:text-left mt-[-25px]  w-full md:w-[550px] leading-relaxed">
@@ -136,7 +134,7 @@ const About = () => {
             tremendously. With us, you get a perfect blend of experience and
             creativity. We help you to get complete guidance to select the type
             of service suitable for your business. The web and ecommerce
-            development is done by our expert developers in their fields. 
+            development is done by our expert developers in their fields.
           </p>
           <Link
             to="/contact-us"
