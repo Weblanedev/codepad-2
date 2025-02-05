@@ -1,13 +1,12 @@
-import { useEffect } from "react";
-import { Link } from "react-router-dom";
+import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const About = () => {
   useEffect(() => {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: "smooth",
-
+      behavior: 'smooth',
     });
   }, []);
 
@@ -27,7 +26,7 @@ const About = () => {
             to="/products"
             className="text-base font-medium text-white bg-blue-500 rounded-full px-7 md:px-12 py-4 md:py-5 hover:bg-blue-600 flex items-center justify-center gap-3"
           >
-            Explore Products
+            Explore Services
           </Link>
         </div>
 
@@ -55,7 +54,6 @@ const About = () => {
             access and support across operating systems, including Windows and
             Mac; and global support with direct access to an expert.
           </p>
-
         </div>
 
         <img
@@ -128,7 +126,7 @@ const About = () => {
             to our clients. We craft customized solutions as per the needs of
             your business. Our interactive web and ecommerce development
             solutions have helped our clients climb the ladder of success in an
-            agile way. 
+            agile way.
           </p>
 
           <p className="text-center md:text-left mt-[-25px]  w-full md:w-[550px] leading-relaxed">
@@ -136,7 +134,7 @@ const About = () => {
             tremendously. With us, you get a perfect blend of experience and
             creativity. We help you to get complete guidance to select the type
             of service suitable for your business. The web and ecommerce
-            development is done by our expert developers in their fields. 
+            development is done by our expert developers in their fields.
           </p>
           <Link
             to="/contact-us"

@@ -1,6 +1,6 @@
-import { Link } from "react-router-dom";
-import { Book, books, genres } from "./utils";
-import { useEffect, useState } from "react";
+import { Link } from 'react-router-dom';
+import { Book, books, genres } from './utils';
+import { useEffect, useState } from 'react';
 
 const ProductsPage = ({
   setSelectedBook,
@@ -11,12 +11,12 @@ const ProductsPage = ({
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   }, []);
 
   const [selectedGenre, setSelectedGenre] = useState<string>(
-    "Business/Entrepreneurship"
+    'Business/Entrepreneurship'
   );
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
@@ -25,11 +25,11 @@ const ProductsPage = ({
     // get the href and remove everything before the hash (#)
     const href = e.currentTarget.href;
 
-    const targetId = href.replace(/.*\#/, "");
+    const targetId = href.replace(/.*\#/, '');
     // get the element by id and use scrollIntoView
     const elem = document.getElementById(targetId);
     elem?.scrollIntoView({
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   };
 
@@ -52,7 +52,7 @@ const ProductsPage = ({
             onClick={handleScroll}
             className="text-base font-medium text-white bg-blue-500 rounded-full px-7 md:px-12 py-4 md:py-5 hover:bg-blue-600 flex items-center justify-center gap-3"
           >
-            Explore Products
+            Explore Services
           </Link>
         </div>
 
@@ -65,13 +65,13 @@ const ProductsPage = ({
 
       <section className="flex bg-white w-full flex-col px-10 md:px-[130px] items-center justify-center md:justify-between gap-5 pb-14 md:pb-20">
         <div className="flex gap-5 w-full overflow-x-auto py-5 items-start md:items-center md:justify-center mb-5 border-b">
-          {genres.map((genre) => (
+          {genres.map(genre => (
             <button
               onClick={() => setSelectedGenre(genre.name)}
               className={`text-sm font-medium text-white transition-colors  ${
                 selectedGenre === genre.name
-                  ? "!bg-blue-500 hover:!bg-blue-600 !text-white border border-blue-500"
-                  : "bg-white border border-blue-500 !text-blue-500 hover:bg-blue-500 hover:!text-white"
+                  ? '!bg-blue-500 hover:!bg-blue-600 !text-white border border-blue-500'
+                  : 'bg-white border border-blue-500 !text-blue-500 hover:bg-blue-500 hover:!text-white'
               } rounded-full px-7 md:px-8 py-2 md:py-3 hover:bg-blue-600 flex items-center justify-center gap-3`}
             >
               {genre.name}
@@ -81,8 +81,8 @@ const ProductsPage = ({
 
         <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
           {books
-            .filter((book) => book.genre === selectedGenre)
-            .map((book) => (
+            .filter(book => book.genre === selectedGenre)
+            .map(book => (
               <div className="flex flex-col items-center justify-center pt-12 pb-8 px-16 gap-7 bg-blue-50/50 text-blue-900 round ed-xl">
                 <img
                   src={book.img}
