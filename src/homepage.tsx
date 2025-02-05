@@ -1,17 +1,18 @@
-import { Link } from "react-router-dom";
-import { Book, books } from "./utils";
-import { useEffect } from "react";
+import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
-const Homepage = ({
-  setSelectedBook,
-}: {
-  setSelectedBook: (selectedBook: Book) => void;
-}) => {
+// const Homepage = ({
+//   setSelectedBook,
+// }: {
+//   setSelectedBook: (selectedBook: Book) => void;
+// }
+//
+const Homepage = () => {
   useEffect(() => {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   }, []);
 
@@ -30,10 +31,10 @@ const Homepage = ({
           </p>
 
           <Link
-            to="/products"
+            to="/contact-us"
             className="text-base font-medium text-white bg-blue-500 rounded-full px-7 md:px-12 py-4  hover:bg-blue-600 flex items-center justify-center gap-3"
           >
-            Explore Products
+            Explore Services
           </Link>
         </div>
 
@@ -44,7 +45,7 @@ const Homepage = ({
         />
       </section>
 
-      <section className="flex w-full flex-col md:flex-row items-center justify-center md:justify-between gap-5 bg-blue-500/30 py-14 md:py-20">
+      {/* <section className="flex w-full flex-col md:flex-row items-center justify-center md:justify-between gap-5 bg-blue-500/30 py-14 md:py-20">
         <div className="flex flex-col md:flex-row gap-8 items-center justify-center w-full">
           {books.slice(0, 3).map((book) => (
             <div className="flex flex-col items-center justify-center pt-12 pb-8 px-16 md:px-20 gap-7 bg-white rounded-2xl text-blue-900 round ed-xl">
@@ -72,7 +73,7 @@ const Homepage = ({
             </div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       <section className="flex w-full flex-col items-center justify-center md:justify-between gap-[30px] bg-white py-14 md:py-20 px-10 md:px-[130px]">
         <div className="flex flex-col md:flex-row gap-[30px] w-full items-center justify-center">

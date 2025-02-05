@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -11,10 +11,10 @@ const Footer = () => {
         </h3>
 
         <Link
-          to="/products"
+          to="/contact-us"
           className="text-base font-medium text-[#333] bg-white rounded-full px-7 md:px-12 py-4 md:py-5 hover:bg-gray-200 flex items-center justify-center gap-3 max-w-max"
         >
-          Explore Products
+          Explore Services
         </Link>
       </div>
 
@@ -32,10 +32,10 @@ const Footer = () => {
           About
         </Link>
         <Link
-          to="/products"
+          to="/contact-us"
           className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
         >
-          Products
+          Services
         </Link>
         <Link
           to="/contact-us"

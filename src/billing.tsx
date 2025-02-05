@@ -1,24 +1,28 @@
-import { MouseEventHandler, useEffect, useState } from "react";
-import { Link } from "react-router-dom";
-import { useModals } from "./useModal";
-import ShowOrderModal from "./show-order";
-import { Book } from "./utils";
+import { MouseEventHandler, useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { useModals } from './useModal';
+import ShowOrderModal from './show-order';
+import { Book } from './utils';
+
+const PROCESSING_FEE = 0.05;
 
 const Billing = ({ selectedBook }: { selectedBook: Book }) => {
   useEffect(() => {
     window.scrollTo({
       top: 0,
       left: 0,
-      behavior: "smooth",
+      behavior: 'smooth',
     });
   }, []);
 
   function add100Dollars(input: string): string {
     // Extracting the numerical part of the input string
-    const numericalPart = parseFloat(input.replace(/[^\d.]/g, ""));
+    const numericalPart = parseFloat(input.replace(/[^\d.]/g, ''));
 
-    // Adding 100 to the numerical part
-    const result = numericalPart + 105;
+    //// Adding 100 to the numerical part
+    // const result = numericalPart + 105;
+    // Adding the processing fee to the numerical part
+    const result = numericalPart + numericalPart * PROCESSING_FEE;
 
     // Formatting the result back to the original format
     const formattedResult = result.toFixed(2);
@@ -31,10 +35,10 @@ const Billing = ({ selectedBook }: { selectedBook: Book }) => {
   const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
   // State to manage form field values
-  const [cardHolderName, setCardHolderName] = useState("");
-  const [cardNumber, setCardNumber] = useState("");
-  const [expireDate, setExpireDate] = useState("");
-  const [cardCVC, setCardCVC] = useState("");
+  const [cardHolderName, setCardHolderName] = useState('');
+  const [cardNumber, setCardNumber] = useState('');
+  const [expireDate, setExpireDate] = useState('');
+  const [cardCVC, setCardCVC] = useState('');
 
   useEffect(() => {
     // Function to check if all form fields are filled
@@ -68,15 +72,15 @@ const Billing = ({ selectedBook }: { selectedBook: Book }) => {
     setCardCVC(e.target.value);
   };
 
-  const handleSubmit: MouseEventHandler<HTMLButtonElement> = (e) => {
+  const handleSubmit: MouseEventHandler<HTMLButtonElement> = e => {
     e.preventDefault();
     toggleShowInvoiceModal();
   };
 
-  const showInvoice = useModals(["showInvoice"]);
+  const showInvoice = useModals(['showInvoice']);
 
   function toggleShowInvoiceModal() {
-    showInvoice.toggleModal("showInvoice");
+    showInvoice.toggleModal('showInvoice');
   }
 
   return (
@@ -163,21 +167,19 @@ const Billing = ({ selectedBook }: { selectedBook: Book }) => {
                 {selectedBook?.price}
               </h4>
             </div>
-            <div className="flex items-center justify-between py-[15px] w-full border-b">
+            {/* <div className="flex items-center justify-between py-[15px] w-full border-b">
               <h4 className="text-[#707070] uppercase font-medium text-[13px]">
                 Professional consultation service charge
               </h4>
               <h4 className="text-[#161616] font-medium text-[16px]">
-                $20.00
+                ₦6,000.00
               </h4>
-            </div>
+            </div> */}
             <div className="flex items-center justify-between py-[15px] w-full border-b">
               <h4 className="text-[#707070] uppercase font-medium text-[13px]">
                 Processing Fee
               </h4>
-              <h4 className="text-[#161616] font-medium text-[16px]">
-                $5.00
-              </h4>
+              <h4 className="text-[#161616] font-medium text-[16px]">5%</h4>
             </div>
             <div className="flex items-center justify-between py-[15px] w-full border-b">
               <h4 className="text-[#707070] font-medium text-[13px]">TOTAL</h4>
@@ -344,7 +346,7 @@ const Billing = ({ selectedBook }: { selectedBook: Book }) => {
             <p className="text-[#161616] font-normal text-[16px] text-left">
               Your personal data will be used to process your order, support
               your experience throughout this website, and for other purposes
-              described in our{" "}
+              described in our{' '}
               <Link
                 to="/privacy-policy"
                 className="text-[#a20401] cursor-pointer"
