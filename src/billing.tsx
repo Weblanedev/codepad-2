@@ -2,11 +2,11 @@ import { MouseEventHandler, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useModals } from './useModal';
 import ShowOrderModal from './show-order';
-import { Book } from './utils';
+import { Service } from './data/services';
 
 const PROCESSING_FEE = 0.05;
 
-const Billing = ({ selectedBook }: { selectedBook: Book }) => {
+const Billing = ({ setSelectedProduct }: { setSelectedProduct: Service }) => {
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -25,8 +25,10 @@ const Billing = ({ selectedBook }: { selectedBook: Book }) => {
     const result = numericalPart + numericalPart * PROCESSING_FEE;
 
     // Formatting the result back to the original format
-    const formattedResult = result.toFixed(2);
-    const output = `$${formattedResult}`;
+    const formattedResult = result
+      .toFixed(0)
+      .replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    const output = `₦${formattedResult}`;
 
     return output;
   }
@@ -161,10 +163,10 @@ const Billing = ({ selectedBook }: { selectedBook: Book }) => {
             </div>
             <div className="flex items-center justify-between py-[15px] w-full border-b">
               <h4 className="text-[#161616] font-medium text-[16px] leading-5 upperc ase w-[350px]">
-                {selectedBook?.title}
+                {setSelectedProduct?.title}
               </h4>
               <h4 className="text-[#161616] font-medium text-[16px]">
-                {selectedBook?.price}
+                {setSelectedProduct?.price}
               </h4>
             </div>
             {/* <div className="flex items-center justify-between py-[15px] w-full border-b">
@@ -184,7 +186,7 @@ const Billing = ({ selectedBook }: { selectedBook: Book }) => {
             <div className="flex items-center justify-between py-[15px] w-full border-b">
               <h4 className="text-[#707070] font-medium text-[13px]">TOTAL</h4>
               <h4 className="text-[#a20401] font-medium text-[16px]">
-                {add100Dollars(selectedBook.price)}
+                {add100Dollars(setSelectedProduct.price)}
               </h4>
             </div>
           </div>
