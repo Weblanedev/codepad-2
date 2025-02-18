@@ -31,7 +31,7 @@ const Homepage = () => {
           </p>
 
           <Link
-            to="/contact-us"
+            to="/services"
             className="text-base font-medium text-white bg-blue-500 rounded-full px-7 md:px-12 py-4  hover:bg-blue-600 flex items-center justify-center gap-3"
           >
             Explore Services

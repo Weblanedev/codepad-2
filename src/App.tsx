@@ -6,15 +6,15 @@ import About from './about';
 import Contact from './contact';
 import Billing from './billing';
 import PrivacyPolicy from './terms-and-privacy';
-// import ProductsPage from './products-page';
+import ServicesPage from './services-page';
 import BlogOne from './blog-one';
 import BlogTwo from './blog-two';
 import BlogThree from './blog-three';
 import { useState } from 'react';
-import { Book, books } from './utils';
+import { Service, services } from './data/services';
 
 function App() {
-  const [selectedBook] = useState<Book>(books[1]);
+  const [selectedProduct, setSelectedProduct] = useState<Service>(services[1]);
 
   return (
     <>
@@ -32,13 +32,13 @@ function App() {
         <Route path="/contact-us" element={<Contact />} />
         <Route
           path="/billing"
-          element={<Billing selectedBook={selectedBook} />}
+          element={<Billing setSelectedProduct={selectedProduct} />}
         />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-        {/* <Route
-          path="/products"
-          element={<ProductsPage setSelectedBook={setSelectedBook} />}
-        /> */}
+        <Route
+          path="/services"
+          element={<ServicesPage setSelectedProduct={setSelectedProduct} />}
+        />
         <Route path="/blog/one" element={<BlogOne />} />
         <Route path="/blog/two" element={<BlogTwo />} />
         <Route path="/blog/three" element={<BlogThree />} />
