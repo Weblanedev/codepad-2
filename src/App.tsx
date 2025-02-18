@@ -6,7 +6,7 @@ import About from './about';
 import Contact from './contact';
 import Billing from './billing';
 import PrivacyPolicy from './terms-and-privacy';
-import ServicesPage from './services-page';
+import ProductsPage from './products-page';
 import BlogOne from './blog-one';
 import BlogTwo from './blog-two';
 import BlogThree from './blog-three';
@@ -37,7 +37,7 @@ function App() {
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route
           path="/products"
-          element={<ServicesPage setSelectedProduct={setSelectedProduct} />}
+          element={<ProductsPage setSelectedProduct={setSelectedProduct} />}
         />
         <Route path="/blog/one" element={<BlogOne />} />
         <Route path="/blog/two" element={<BlogTwo />} />
