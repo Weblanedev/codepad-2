@@ -36,7 +36,7 @@ function App() {
         />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route
-          path="/services"
+          path="/products"
           element={<ServicesPage setSelectedProduct={setSelectedProduct} />}
         />
         <Route path="/blog/one" element={<BlogOne />} />
