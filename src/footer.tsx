@@ -11,10 +11,10 @@ const Footer = () => {
         </h3>
 
         <Link
-          to="/services"
+          to="/products"
           className="text-base font-medium text-[#333] bg-white rounded-full px-7 md:px-12 py-4 md:py-5 hover:bg-gray-200 flex items-center justify-center gap-3 max-w-max"
         >
-          Explore Services
+          Explore Products
         </Link>
       </div>
 
@@ -32,10 +32,10 @@ const Footer = () => {
           About
         </Link>
         <Link
-          to="/services"
+          to="/products"
           className="text-[14px] leading-[24px] font-medium text-white cursor-pointer"
         >
-          Services
+          Products
         </Link>
         <Link
           to="/contact-us"
